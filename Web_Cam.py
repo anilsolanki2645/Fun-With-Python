@@ -7,4 +7,8 @@ if not cap.isOpened():
 
 while True:
     ret, frame = cap.read()
+    frame = cv2.resize(frame, None, fx=1, fy=1, interpolation=cv2.INTER_AREA)
     
+
+cap.release()
+cv2.destryAllWindow()
