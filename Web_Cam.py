@@ -13,4 +13,5 @@ while True:
     if c == 27:
         break
 
-w()
+cap.release()
+cv2.destryAllWindow()
