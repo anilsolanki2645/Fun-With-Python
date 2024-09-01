@@ -39,7 +39,6 @@ def protect_excel(file_path, password):
         # Force garbage collection to release COM objects
         del workbook
         del excel
-
         gc.collect()  # Explicitly trigger garbage collection
         time.sleep(1)  # Additional delay to ensure file handles are released
 
@@ -56,11 +55,7 @@ def protect_excel(file_path, password):
         # Uninitialize the COM environment
         pythoncom.CoUninitialize()
 
-    # Usage
-
-
-
-
-
-
-
+# Usage
+file_path = r"D:\FILES\COLLEGE\pass\Your_File_Name.xlsx"  # Replace with the path to your Excel file
+password = "Your Password"                             # Replace with your desired password
+protect_excel(file_path, password)
