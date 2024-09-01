@@ -40,6 +40,10 @@ def protect_excel(file_path, password):
         del workbook
         del excel
 
+        gc.collect()  # Explicitly trigger garbage collection
+        time.sleep(1)  # Additional delay to ensure file handles are released
+
+
 
 
 
