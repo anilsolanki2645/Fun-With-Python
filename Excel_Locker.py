@@ -36,6 +36,10 @@ def protect_excel(file_path, password):
         # Quit Excel application
         excel.Quit()
 
+        # Force garbage collection to release COM objects
+        del workbook
+        del excel
+
 
 
 
