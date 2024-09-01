@@ -47,6 +47,14 @@ def protect_excel(file_path, password):
         os.remove(file_path)  # Remove the original file
         os.rename(temp_file_path, file_path)  # Rename the temp file to the original file name
 
+        print(f"Excel file '{file_path}' has been protected with a password.")
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    finally:
+        # Uninitialize the COM environment
+        pythoncom.CoUninitialize()
 
 
 
