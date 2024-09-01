@@ -43,6 +43,10 @@ def protect_excel(file_path, password):
         gc.collect()  # Explicitly trigger garbage collection
         time.sleep(1)  # Additional delay to ensure file handles are released
 
+        # Replace the original file with the password-protected version
+        os.remove(file_path)  # Remove the original file
+        os.rename(temp_file_path, file_path)  # Rename the temp file to the original file name
+
 
 
 
