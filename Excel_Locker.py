@@ -56,6 +56,8 @@ def protect_excel(file_path, password):
         # Uninitialize the COM environment
         pythoncom.CoUninitialize()
 
+    # Usage
+
 
 
 
